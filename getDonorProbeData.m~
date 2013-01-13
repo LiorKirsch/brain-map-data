@@ -1,0 +1,24 @@
+function probeData = getDonorProbeData(csvFile)
+
+
+    fid = fopen('donor 9861/Probes.csv');
+       csvData = textscan(fid, '%f %q %f %q %q %f %s', 'delimiter', ',','HeaderLines', 1);
+    fclose(fid);
+    csvData = importdata(csvFile,',',1);
+    
+
+    probeData.probe_ids = csvData{1};
+    probeData.probe_names = csvData.textdata(2:end,2);
+    probeData.gene_ids = csvData.textdata(2:end,3);
+    probeData.gene_symbols = csvData.textdata(2:end,4);
+    probeData.gene_names = csvData.textdata(2:end,5);
+    probeData.entrez_id = csvData.data(:,1);
+    probeData.chromosome = csvData.data(:,2);
+
+    probeData.textData = csvData.textdata(2:end,:);
+    probeData.textTitles = {'probe_id','probe_name','gene_id','gene_symbol','gene_name'};
+    
+    probeData.numericData = csvData.data(1:end,:);
+    probeData.numericTitles = {'entrez_id','chromosome'};
+
+end
