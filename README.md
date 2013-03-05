@@ -11,16 +11,16 @@ regionSimilarity = computeRegionSimilarities(correlationMatrix, adjacencyMatrixS
 
 
 
-Reading and first provessing functions:
+Reading and early processing functions:
 ================
 mainBuildDataFiles
 > The main file for reading and processing the data files.
-> 1. some checks on the probes metadata ( compareData(samples) )
-> 2. the structure files are combined into one matrix
-> 3. builds the expression data matrix of size #probes x #structures x #donors
-> 4. save 'expressionMatrixCombainedByStructure.mat'
-> 5. reduces the data to only the most correlative probes for each gene
-> 6. save 'onlyCorrelativeProbes.mat'
+* 1. some checks on the probes metadata ( compareData(samples) )
+* 2. the structure files are combined into one matrix
+* 3. builds the expression data matrix of size #probes x #structures x #donors
+* 4. save 'expressionMatrixCombainedByStructure.mat'
+* 5. reduces the data to only the most correlative probes for each gene
+* 6. save 'onlyCorrelativeProbes.mat'
 
 
 [textProblems,numericProblems] = compareData(samples)
