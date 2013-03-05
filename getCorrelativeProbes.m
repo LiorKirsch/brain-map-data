@@ -1,4 +1,10 @@
 function [selectedProbesData,dataMatrix] = getCorrelativeProbes(dataMatrix, probeData)
+% probeData holds the metadata on each probe in the microarray expriment
+% dataMatrix hold the expression value of [#probes x #regions]
+%
+% - compute the correlation of each probe across pairs of donors
+% - for each gene it finds the probe which has the best correlation between subjects
+% - returns the probes and the dataMatrix filtered to only the most correlative probes for each gene.
 
     gene_ids = probeData.gene_ids;
     numberOfDonors = size(dataMatrix,3);

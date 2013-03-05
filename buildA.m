@@ -10,7 +10,8 @@ function buildA()
     ontology.adjacancyMatrix = distanceToAdjacancy(ontology.unDirectedDistanceMatrix/4);
     reducedOntology.adjacancyMatrix = distanceToAdjacancy(reducedOntology.unDirectedDistanceMatrix/4);
     
-
+    regionSimilarity = computeRegionSimilarities(correlationMatrix, adjacencyMatrixSource, adjacencyMatrixDestination);
+    
 end
 
 function adjacancyMatrix = distanceToAdjacancy(distanceMatrix)

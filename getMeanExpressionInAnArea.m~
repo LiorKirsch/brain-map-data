@@ -1,6 +1,6 @@
 function dataMatrix = getMeanExpressionInAnArea(expressionData, allStructures, reverseIndex)
 % builds an expression data matrix of size #probes x #structures x #donors
-% for areas which several measurments we compute the mean
+% for areas which several measurments we
 % areas for which we have no data are filled with NaN
 
     numberOfProbes = size(expressionData{1},1);

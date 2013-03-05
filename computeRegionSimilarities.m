@@ -1,5 +1,5 @@
 function regionSimilarity = computeRegionSimilarities(correlationMatrix, adjacencyMatrixSource, adjacencyMatrixDestination)
-% create the least square problem and solve it.
+% create a least square problem and solve it.
 
     m = size(correlationMatrix,1);
     n = size(correlationMatrix,2);

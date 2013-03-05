@@ -1,4 +1,6 @@
 function [textProblems,numericProblems] = compareData(samples)
+% comapres the data in samples that they all have the same categories
+
     [p,q] = meshgrid(1: size(samples,2), 1: size(samples,2));
     pairs = [p(:) q(:)];
     pairs = unique(sort(pairs,2),'rows');

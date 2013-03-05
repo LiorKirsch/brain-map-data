@@ -1,5 +1,5 @@
 function [location_xyz, location_std] = getStuctureMeanLocation(structureData, reverseIndex, allStructures)
-
+%for each structure compute the mean location xyz and the standard deviation
     
     location_xyz = nan(length(allStructures),3,length(structureData));
     location_std = nan(length(allStructures),3,length(structureData));

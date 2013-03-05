@@ -1,7 +1,6 @@
 function [allStructuresData, reverseIndex, location_xyz, location_std] = unifiedStuctures(structuresData)
 % combines the structures from the different expremints into one matrix
 % different experiments may not test all areas
-
     allStructuresShort = {};
     allStructuresData = {};
     reverseIndex = cell(size(structuresData));
